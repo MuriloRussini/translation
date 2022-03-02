@@ -1,0 +1,212 @@
+en:
+  errors:
+    format: "%{message}"
+    messages:
+      blank: "The field cannot be empty" 
+      invalid: "Invalid format" 
+      too_short: "The field must contain %{count} or more characters" 
+      too_long: "The field must contain %{count} or less characters" 
+      not_a_number: "Must be a number" 
+      greater_than: "Must be greater than %{count}" 
+      greater_than_or_equal_to: "Must be greater or equal to %{count}" 
+      less_than_or_equal_to: "Can not exceed %{count}"
+      required: "The field must be selected"
+      unknown: "Unknown error"
+      unknown_locale: "Localization unsupported"
+      invalid_json: "Format invalid"
+      not_found: "Not found"
+      inclusion: "The field value is not allowed"
+      percent: "The value must be in the range from 0 to 100"
+      mutual: "Invalid mutual state"
+      at_least_one_required: "You need to fill in at least one field"
+      taken: "Field value is not unique"
+      recaptcha: "It seems that you are a robot 🤖, so you did not pass the test."
+      boolean: "Must be true or false"
+      forbidden: "Forbidden"
+#Carrierwave:
+      carrierwave_processing_error: "Failed to be processed"
+      carrierwave_integrity_error: "Is not of an allowed file type"
+      carrierwave_download_error: "Could not be downloaded"
+      extension_whitelist_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
+      extension_allowlist_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
+      extension_denylist_error: "You are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}"
+      content_type_whitelist_error: "You are not allowed to upload %{content_type} files, allowed types: %{allowed_types}"
+      content_type_allowlist_error: "You are not allowed to upload %{content_type} files, allowed types: %{allowed_types}"
+      content_type_denylist_error: "You are not allowed to upload %{content_type} files"
+      processing_error: "Failed to manipulate, maybe it is not an image?"
+      min_size_error: "File size of %{filename} should be greater than %{min_size} Mb"
+      max_size_error: "File size of %{filename} should be less than %{max_size} Mb"
+      max_resolution: "Maximum image resolution: %{height}x%{width}"
+      min_resolution: "Minimum image resolution: %{height}x%{width}"
+  grape:
+    errors:
+      format: ! '%{attributes}=%{message}='
+  time:
+    formats:
+      long: "%d.%m.%Y %H:%M"
+      postgres: "%Y-%m-%d %H:%M:%S"
+      date: "%d %B %Y"
+      full: "%A %d %B %Y  %H:%M:%S %z"
+      input: "%Y-%m-%dT%H:%M"
+  active_admin:
+    powered_by: ""
+    confirmation: "A you shure?"
+    dashboard:
+      main: "Main page"
+
+  activerecord:
+    messages:
+      models:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "Email already taken"
+              not_found: "User not found"
+            password:
+              mismatch: "Password mismatch"
+        account:
+          attributes:
+            link:
+              taken: "Your Instagram account has already been added. Contact support to promptly resolve the issue."
+          countries_should_be_different: "Countries should be different"
+          cities_should_be_different: "Cities should be different"
+          ages_should_be_different: "Ages should be different"
+        transaction:
+          attributes:
+            amount:
+              not_integer: "Value must be integer"
+        invoice:
+          attributes:
+            amount:
+              greater_than_or_equal_to: "The minimum amount to top up for legal entities is $%{count}"
+              purpose_nil: "First determine the purpose of the payment"
+            inn:
+              invalid_length: "Длина ИНН 12 символов для ИП, либо 10 символов для организации"
+            kpp:
+              invalid_length: "Minimal length 10 characters, maximum 12"
+            account:
+              invalid_length: "Length exactly 20 characters"
+            corr_account:
+              invalid_length: "Length exactly 20 characters"
+            bik:
+              invalid_length: "Length exactly 9 characters"
+            phone:
+              invalid_length: "Minimal length 10 characters, maximum 12"
+        order:
+          attributes:
+            task:
+              number_story_nil: "Number of story should be present"
+              number_story_out_of_range: "Number of story should be positive number from 1 to 5"
+              description_story_nil: "Description for story should be present"
+              description_invalid: "Description format invalid"
+              description_too_long: "Description must contain %{count} or less characters"
+              link_enabled_invalid: "Link enabled invalid"
+            publication_date:
+              too_soon: "The publication date should be no earlier than tomorrow"
+              user_nil: "Set user first"
+        package:
+          attributes:
+            manager:
+              invalid: "Can't be a package manager"
+      messages:
+        record_invalid: "Record invalid"
+    attributes:
+      user:
+        email: "E-mail"
+        password: "Password"
+        created_at: "Registered at"
+        login_at: "Last seen"
+        role: "Role"
+  user:
+    new_password:
+      generated: "A new password has been generated and sent to the specified email address"
+      confirmed: "The password has been successfully updated"
+      token_rejected: "The new password has not been applied, the email has expired or token invalid. Try again"
+    authorization_required: "User authorization required"
+    not_enough_rights: "Not enough rights"
+    sign_in_failed: "Invalid username or password"
+    sign_in_form:
+      email: "E-mail"
+      password: "Password"
+      button: "Sign in"
+      title: "Autorization"
+    not_found: "User not found"
+  account:
+    remoderation:
+      successful: "Account remoderation request successfull. Wait for moderation"
+      failed: "Account remoderation request failed"
+    deletion:
+      successful: "Account successfully deleted"
+      failed: "The account cannot be deleted"
+    moderation:
+      r461: "4.6.1. The account has less than 10,000 subscribers."
+      r462: "4.6.2. The account is blocked or inactive."
+      r463: "4.6.3. The request contains an incorrect account link."
+      r464: "4.6.4. The user is not the owner of the claimed account."
+      r465: "4.6.5. The account has no purpose to accept and place advertising Projects within the Service."
+      r466: "4.6.6. The Influencer has not published any posts and stories for a long time. The Service defines the
+      period at its own discretion, taking into account the topic and the overall quality of the account."
+      r467: "4.6.7. The audience of the account raises suspicion (fake subscribers, views, and other unusual activity)."
+      r468: "4.6.8. The Account does not exceed 3 months from the date of the first publication."
+      r469: "4.6.9. The content of the account violates the laws of the Russian Federation."
+      r4610: "4.6.10. The account content is largely composed of materials violating ethical and moral principles
+      (shock content)."
+  suborder:
+    failed_to_run: "Forbidden to run project"
+    failed_to_done: "Forbidden to done project"
+    failed_to_complete: "Forbidden to complete project"
+    failed_to_cancel: "Forbidden to cancel project"
+    publication_date_asap: "As soon as possible"
+  order:
+    max_media_files_count: "The maximum number of attached files should not exceed %{count}"
+    max_media_files_size: "The maximum total file size should not exceed %{count} Mb"
+  transaction:
+    errors:
+      insufficient_funds: "Insufficient funds"
+      invalid_commission: "Invalid commission value"
+      invalid_pay_method: "The payment method is not supported"
+    name:
+      unknown: "Transaction №%{id}"
+      income_admin: "Replenishment of the balance by the administrator"
+      income_card: "Topping up the balance with a bank card"
+      income_wallet: "Replenishment of the balance with an electronic wallet"
+      income_invoice: "Replenishment of the balance by invoice №%{id}"
+      income_package: "Cancel package №%{id}"
+      expense_admin: "Withdrawal of funds by the administrator"
+      expense_card: "Withdrawal of funds to a bank card"
+      expense_wallet: "Withdrawal of funds to an electronic wallet"
+      expense_qiwi: "Withdrawal of funds to the QIWI e-wallet"
+      expense_invoice: "Withdrawal of funds to a bank account"
+      expense_order: "Payment for order №%{id}"
+      expense_package: "Payment for package №%{id}"
+  payout:
+    confirmation:
+      successful: "Payout successfully confirmed"
+      failed: "Payout could not be confirmed. Perhaps the link is already expired"
+    comment:
+      overdue: "The payout was not confirmed in 24 hours"
+      cancel_by_admin: "Canceled by administrator"
+  payment:
+    description: "Balance top up"
+    errors:
+      invalid_payment_data: "Payment data is invalid"
+      recharge_url_getting_failed: "Error receiving the payment URL"
+      transaction_state_error: "Invalid transaction status. Perhaps the payment has already passed"
+      paymore:
+        general_decline: "The bank's refusal to perform the operation. The reason is not detailed"
+        security_decline: "Rejected by financial monitoring"
+        external_decline: "The operation was rejected by the payment system. Repeat the operation later"
+        invalid_account: "Incorrect details of the payment method (card, wallet, account) are specified"
+        unsupported_account: "The specified details are not supported by the payment system (card, wallet, account)"
+        expired_card: "The card is expired."
+        transaction_limit_exceeded: "Payment limits have been reached. Repeat the operation later"
+        expired_transaction: "The payment was canceled by the user or closed due to a timeout"
+        account_limit_exceeded: "The limits of the client's bank account have been exhausted. Repeat the operation
+                                later"
+        insufficient_funds: "Insufficient funds for payment"
+        country_unsupported: "The country of issue of the card is not included in the list of allowed"
+        invalid_parameters: "Incorrect data was entered. Please check the entered data and try again"
+        provider_error: "An error has occurred, please try again later"
+  
